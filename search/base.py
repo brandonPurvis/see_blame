@@ -16,6 +16,9 @@ def build_query(search_text, from_=0, size=10):
         'aggs': {
             'per_user': {
                 'terms': {'field': 'uname'}
+            },
+            'per_file': {
+                'terms': {'field': 'fname'}
             }
         }
     }
