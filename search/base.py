@@ -1,7 +1,7 @@
 from elasticsearch_dsl import Q, F, Search
 
 
-def build_query(search_text, from_=0, size=10):
+def build_query(search_text, from_=0, size=100):
     query = {
         'from': from_,
         'size': size,
