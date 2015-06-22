@@ -1,5 +1,13 @@
 <div class="span12">
-    {% for agg in aggs %}
-        <button class="btn">{{ agg.key }} <b>{{ agg.doc_count }}</b></button>
-    {% endfor %}
+    <div class="row">
+        {% for agg in user_aggs %}
+            <button class="btn">{{ agg.key }} <b>{{ agg.doc_count }}</b></button>
+        {% endfor %}
+    </div>
+    <br/>
+    <div class="row">
+        {% for agg in file_aggs %}
+            <button class="btn">{{ agg.key }} <b>{{ agg.doc_count }}</b></button>
+        {% endfor %}
+    </div>
 </div>
